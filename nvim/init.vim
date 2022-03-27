@@ -33,6 +33,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ayu-theme/ayu-vim' " or other package manager
 Plug 'easymotion/vim-easymotion'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 let g:indent_guides_guide_size            = 1  " ÊåáÂÆöÂØπÈΩêÁ∫øÁöÑÂ∞∫ÂØ∏
 let g:indent_guides_start_level           = 2  " ‰ªéÁ¨¨‰∫åÂ±ÇÂºÄÂßãÂèØËßÜÂåñÊòæÁ§∫Áº©Ëøõ
