@@ -5,33 +5,31 @@ Plug 'ellisonleao/gruvbox.nvim'
 " ========= appearence here. ==========
 
 Plug 'nvim-lualine/lualine.nvim'
-" Plug 'feline-nvim/feline.nvim'
 Plug 'xiyaowong/nvim-transparent'
-" Plug 'junegunn/goyo.vim'
 Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
-" welcome page
-" Plug 'mhinz/vim-startify'
-" dashboard
 Plug 'goolord/alpha-nvim'
-" Speed up Neovim.
 Plug 'lewis6991/impatient.nvim'
 
 Plug 'Yggdroot/indentLine'
 Plug 'vim-airline/vim-airline'       
-Plug 'vim-airline/vim-airline-themes' "airline ÁöÑ‰∏ªÈ¢ò
+Plug 'vim-airline/vim-airline-themes' "airline 
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
 
 Plug 'majutsushi/tagbar'
-Plug 'octol/vim-cpp-enhanced-highlight'
+
 Plug 'honza/vim-snippets'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'vim-scripts/AutoComplPop'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
 Plug 'ayu-theme/ayu-vim' " or other package manager
+
 Plug 'easymotion/vim-easymotion'
+
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -39,10 +37,11 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
 call plug#end()
-let g:indent_guides_guide_size            = 1  " ÊåáÂÆöÂØπÈΩêÁ∫øÁöÑÂ∞∫ÂØ∏
-let g:indent_guides_start_level           = 2  " ‰ªéÁ¨¨‰∫åÂ±ÇÂºÄÂßãÂèØËßÜÂåñÊòæÁ§∫Áº©Ëøõ
 
-" ËÆæÁΩÆÁä∂ÊÄÅÊ†è
+let g:indent_guides_guide_size            = 1  
+let g:indent_guides_start_level           = 2 
+
+" airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#buffer_nr_show = 0
@@ -62,7 +61,7 @@ let g:airline#extensions#tabline#buffer_idx_format = {
        \ '8': '8 ',
        \ '9': '9 '
        \}
-" ËÆæÁΩÆÂàáÊç¢tabÁöÑÂø´Êç∑ÈîÆ <\> + <i> ÂàáÊç¢Âà∞Á¨¨i‰∏™ tab
+
 nmap <leader>1 <Plug>AirlineSelectTab1
 nmap <leader>2 <Plug>AirlineSelectTab2
 nmap <leader>3 <Plug>AirlineSelectTab3
@@ -72,12 +71,11 @@ nmap <leader>6 <Plug>AirlineSelectTab6
 nmap <leader>7 <Plug>AirlineSelectTab7
 nmap <leader>8 <Plug>AirlineSelectTab8
 nmap <leader>9 <Plug>AirlineSelectTab9
-" ËÆæÁΩÆÂàáÊç¢tabÁöÑÂø´Êç∑ÈîÆ <\> + <-> ÂàáÊç¢Âà∞Ââç‰∏Ä‰∏™ tab
 nmap <leader>- <Plug>AirlineSelectPrevTab
-" ËÆæÁΩÆÂàáÊç¢tabÁöÑÂø´Êç∑ÈîÆ <\> + <+> ÂàáÊç¢Âà∞Âêé‰∏Ä‰∏™ tab
 nmap <leader>+ <Plug>AirlineSelectNextTab
-" ËÆæÁΩÆÂàáÊç¢tabÁöÑÂø´Êç∑ÈîÆ <\> + <q> ÈÄÄÂá∫ÂΩìÂâçÁöÑ tab
 nmap <leader>q :bp<cr>:bd #<cr>
+ 
+" easymotion
 " <Leader>f{char} to move to {char}
 map  <Leader>f <Plug>(easymotion-bd-f)
 nmap <Leader>f <Plug>(easymotion-overwin-f)
@@ -92,7 +90,7 @@ nmap <Leader>l <Plug>(easymotion-overwin-line)
 " Move to word
 map  <Leader>w <Plug>(easymotion-bd-w)
 nmap <Leader>w <Plug>(easymotion-overwin-w)
-" ‰øÆÊîπ‰∫Ü‰∏Ä‰∫õ‰∏™‰∫∫‰∏çÂñúÊ¨¢ÁöÑÂ≠óÁ¨¶
+
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
@@ -152,7 +150,7 @@ let g:rainbow_conf = {
 \   }
 \}
 let g:tagbar_width=30
-nnoremap <silent> <F4> :TagbarToggle<CR> " Â∞ÜtagbarÁöÑÂºÄÂÖ≥ÊåâÈîÆËÆæÁΩÆ‰∏∫ F4
+nnoremap <silent> <F4> :TagbarToggle<CR> " 
 " if hidden is not set, TextEdit might fail.
 set hidden
 " Some servers have issues with backup files, see #649
@@ -170,10 +168,8 @@ set signcolumn=yes
 
 inoremap <expr> <Down> pumvisible() ? "<C-n>" : "<Down>"
 inoremap <expr> <Up> pumvisible() ? "<C-p>" : "<Up>"
- 
 inoremap <expr> <Right> pumvisible() ? "<C-y>" : "<Right>"
 inoremap <expr> <CR> pumvisible() ? "<C-y>" : "<CR>"
-
 inoremap <expr> <Left> pumvisible() ? "<C-e>" : "<Left>"
 
 function! s:check_back_space() abort
@@ -181,60 +177,7 @@ function! s:check_back_space() abort
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
  
- 
 
-" Use K to show documentation in preview window
-nnoremap <silent> K :call <SID>show_documentation()<CR>
- 
-"function! s:show_documentation()
-"  if (index(['vim','help'], &filetype) >= 0)
-"    execute 'h '.expand('<cword>')
-"  else
-"    call CocAction('doHover')
-"  endif
-"endfunction
- 
-" Highlight symbol under cursor on CursorHold
-"autocmd CursorHold * silent call CocActionAsync('highlight')
- 
-" Remap for rename current word
-"nmap <leader>rn <Plug>(coc-rename)
- 
- 
-augroup mygroup
-  autocmd!
-  " Setup formatexpr specified filetype(s).
-  autocmd FileType typescript,json setl formatexpr=CocAction('formatSelected')
-  " Update signature help on jump placeholder
-  autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
-augroup end
- 
-" Remap for do codeAction of selected region, ex: `<leader>aap` for current paragraph
-"xmap <leader>a  <Plug>(coc-codeaction-selected)
-"nmap <leader>a  <Plug>(coc-codeaction-selected)
-" 
-"" Remap for do codeAction of current line
-"nmap <leader>ac  <Plug>(coc-codeaction)
-"" Fix autofix problem of current line
-"nmap <leader>qf  <Plug>(coc-fix-current)
-" 
-"" Create mappings for function text object, requires document symbols feature of languageserver.
-"xmap if <Plug>(coc-funcobj-i)
-"xmap af <Plug>(coc-funcobj-a)
-"omap if <Plug>(coc-funcobj-i)
-"omap af <Plug>(coc-funcobj-a)
- 
-" Use `:Format` to format current buffer
-command! -nargs=0 Format :call CocAction('format')
- 
-" Use `:Fold` to fold current buffer
-command! -nargs=? Fold :call     CocAction('fold', <f-args>)
- 
-" use `:OR` for organize import of current buffer
-command! -nargs=0 OR   :call     CocAction('runCommand', 'editor.action.organizeImport')
-set rnu
-
-" ÊêúÁ¥¢Êèí‰ª∂
 let g:ctrlp_map = '<leader>p'
 let g:ctrlp_cmd = 'CtrlP'
 let g:ctrlp_custom_ignore = {
@@ -267,12 +210,14 @@ let g:gruvbox_material_ui_contrast = 'high'
 let g:gruvbox_material_diagnostic_text_highlight = 1
 let g:gruvbox_material_better_performance = 1
 
+" colorscheme
 colorscheme gruvbox-material
-"let ayucolor="dark"   " for dark version of theme
-"colorscheme ayu
+" 搜素文件
 nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>ca :w <bar> %bd <bar> e# <bar> bd# <CR>
+
 set autoindent
+
+"缩进
 set tabstop=4       " The width of a TAB is set to 4.
                     " Still it is a \t. It is just that
                     " Vim will interpret it to be having
@@ -282,11 +227,16 @@ set softtabstop=4   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 
 set ofu=syntaxcomplete#Complete
-imap <silent> ` <C-X><C-O>
 set cursorcolumn
 set cursorline
+set rnu
 set nu
+set nowrap
 
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set fencs=utf8,gbk,gb2312,gb18030
+"
 " nvim_tree
 let g:nvim_tree_indent_markers = 1 "0 by default, this option shows indent markers when folders are open
 let g:nvim_tree_git_hl = 1 "0 by default, will enable file highlight for git attributes (can be used without the icons).
@@ -350,8 +300,8 @@ nnoremap <leader>n :NvimTreeFindFile<CR>
 " NvimTreeCollapseKeepBuffers
 
 set termguicolors " this variable must be enabled for colors to be applied properly
-
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
+
 lua require('plugins')
 lua require('plugin-config/nvim-tree')
