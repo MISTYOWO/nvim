@@ -1,6 +1,7 @@
 call plug#begin('~/.vim/plugged')
 Plug 'sainnhe/gruvbox-material'
 Plug 'ellisonleao/gruvbox.nvim'
+Plug 'navarasu/onedark.nvim'
 
 " ========= appearence here. ==========
 
@@ -36,10 +37,13 @@ Plug 'nvim-telescope/telescope.nvim'
 
 Plug 'kyazdani42/nvim-web-devicons' " for file icons
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'airblade/vim-gitgutter'
+Plug 'APZelos/blamer.nvim'
 call plug#end()
 
 let g:indent_guides_guide_size            = 1  
 let g:indent_guides_start_level           = 2 
+let g:blamer_enabled = 1
 
 " airline
 let g:airline#extensions#tabline#enabled = 1
@@ -211,7 +215,11 @@ let g:gruvbox_material_diagnostic_text_highlight = 1
 let g:gruvbox_material_better_performance = 1
 
 " colorscheme
-colorscheme gruvbox-material
+"colorscheme gruvbox-material
+"let ayucolor="light"  " for light version of theme
+"let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
+colorscheme ayu
 " 搜素文件
 nnoremap <C-p> :GFiles<CR>
 
@@ -303,7 +311,11 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 
-"coc
+lua require('plugins')
+lua require('plugin-config/nvim-tree')
+lua require('plugin-config/nvim-treesitter')
+
+"Coc-nvim
 "" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
 " unicode characters in the file autoload/float.vim
 set encoding=utf-8
@@ -473,5 +485,7 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
-lua require('plugins')
-lua require('plugin-config/nvim-tree')
+nnoremap w+ :resize +3<CR>
+nnoremap w- :resize -3<CR>
+nnoremap w> :vertical resize +3<CR>
+nnoremap w< :vertical resize -3<CR>
