@@ -13,6 +13,13 @@ use {
 
 use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
+use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+        {'nvim-telescope/telescope-live-grep-raw.nvim'}
+    }
+}
+
 end)
 
 
