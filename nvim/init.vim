@@ -202,8 +202,8 @@ set termguicolors     " enable true colors support
 " colorscheme
 "colorscheme NeoSolarized
 "let ayucolor="light"  " for light version of theme
-let ayucolor="mirage" " for mirage version of theme
-"let ayucolor="dark"   " for dark version of theme
+"let ayucolor="mirage" " for mirage version of theme
+let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 " 搜素文件
 nnoremap <C-p> :GFiles<CR>
@@ -299,6 +299,7 @@ highlight NvimTreeFolderIcon guibg=blue
 lua require('plugins')
 lua require('plugin-config/nvim-tree')
 lua require('plugin-config/nvim-treesitter')
+lua require('plugin-config/transparent')
 
 "Coc-nvim
 "" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
