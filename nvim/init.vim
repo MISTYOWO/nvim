@@ -1,9 +1,7 @@
 call plug#begin('~/.vim/plugged')
-Plug 'sainnhe/gruvbox-material'
-Plug 'ellisonleao/gruvbox.nvim'
-Plug 'navarasu/onedark.nvim'
 
 " ========= appearence here. ==========
+Plug 'overcache/NeoSolarized'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'xiyaowong/nvim-transparent'
@@ -196,28 +194,16 @@ let g:ctrlp_follow_symlinks=1
 
 "...
 set termguicolors     " enable true colors support
-set background=dark
 " For light version.
 " set background=light
 " Set contrast.
 " This configuration option should be placed before `colorscheme gruvbox-material`.
 " Available values: 'hard', 'medium'(default), 'soft'
-let g:gruvbox_material_background = 'hard'
-let g:gruvbox_material_enable_italic = 1
-let g:gruvbox_material_enable_bold = 1
-" only support GUI client
-let g:gruvbox_material_cursor = 'auto'
-let g:gruvbox_material_transparent_background = 0
-let g:gruvbox_material_menu_selection_background = 'green'
-let g:gruvbox_material_ui_contrast = 'high'
-let g:gruvbox_material_diagnostic_text_highlight = 1
-let g:gruvbox_material_better_performance = 1
-
 " colorscheme
-"colorscheme gruvbox-material
+"colorscheme NeoSolarized
 "let ayucolor="light"  " for light version of theme
-"let ayucolor="mirage" " for mirage version of theme
-let ayucolor="dark"   " for dark version of theme
+let ayucolor="mirage" " for mirage version of theme
+"let ayucolor="dark"   " for dark version of theme
 colorscheme ayu
 " 搜素文件
 nnoremap <C-p> :GFiles<CR>
