@@ -11,11 +11,7 @@ Plug 'vim-airline/vim-airline-themes' "airline
 Plug 'scrooloose/nerdcommenter'
 Plug 'luochen1990/rainbow'
 
-Plug 'majutsushi/tagbar'
-
 Plug 'honza/vim-snippets'
-
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'kien/ctrlp.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -153,8 +149,6 @@ let g:rainbow_conf = {
 \       'css': 0,
 \   }
 \}
-let g:tagbar_width=30
-nnoremap <silent> <F4> :TagbarToggle<CR> " 
 " if hidden is not set, TextEdit might fail.
 set hidden
 " Some servers have issues with backup files, see #649
@@ -293,6 +287,7 @@ let g:nvim_tree_icons = {
 nnoremap <silent> <F3> :NvimTreeToggle<CR>
 nnoremap <leader>r :NvimTreeRefresh<CR>
 nnoremap <leader>n :NvimTreeFindFile<CR>
+nnoremap <silent> <F4> :Vista!!<CR>
 
 set termguicolors " this variable must be enabled for colors to be applied properly
 " a list of groups can be found at `:help nvim_tree_highlight`

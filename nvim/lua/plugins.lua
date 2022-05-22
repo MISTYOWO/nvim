@@ -31,6 +31,12 @@ return require('packer').startup(function()
     use 'rafamadriz/friendly-snippets'
     -- lspkind
     use 'onsails/lspkind-nvim'
+    use {
+    "liuchengxu/vista.vim",
+    config = function()
+        require("conf.vista")
+    end
+}
 end
 )
 
