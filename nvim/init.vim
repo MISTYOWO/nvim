@@ -298,12 +298,7 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 " a list of groups can be found at `:help nvim_tree_highlight`
 highlight NvimTreeFolderIcon guibg=blue
 
-lua require('plugins')
-lua require('plugin-config/nvim-tree')
-lua require('plugin-config/nvim-treesitter')
-lua require('plugin-config/transparent')
-lua require('plugin-config/lsp')
-lua require('plugin-config/cmp')
+
 set encoding=utf-8
 
 " TextEdit might fail if hidden is not set.
@@ -336,3 +331,11 @@ nnoremap w+ :resize +3<CR>
 nnoremap w- :resize -3<CR>
 nnoremap w> :vertical resize +3<CR>
 nnoremap w< :vertical resize -3<CR>
+
+lua require('plugins')
+lua require('plugin-config/nvim-tree')
+lua require('plugin-config/nvim-treesitter')
+lua require('plugin-config/transparent')
+lua require('plugin-config/lsp')
+lua require('plugin-config/cmp')
+lua require('plugin-config/lsp_signature')
