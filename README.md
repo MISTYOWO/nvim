@@ -1,5 +1,4 @@
 # nvim
 
-this project is used to store my config for nvim in cloud.
-
+*****lsp的自动补全,代码跳转等基本ide功能，配合tmux食用更加**
 
