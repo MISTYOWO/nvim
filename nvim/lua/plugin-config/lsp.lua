@@ -29,22 +29,12 @@ local on_attach = function(client, bufnr)
   vim.api.nvim_buf_set_keymap(bufnr, 'n', '<space>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opts)
 end
 
-local servers = {
-    pyright = require("plugin-config.pyright"),
-    tsserver = require("plugin-config.tsserver"),
-    html = require("plugin-config.html"),
-    clangd = require("plugin-config.clangd"),
-    gopls = require("plugin-config.gopls")
-    -- jsonls = require("lsp.jsonls"),
-    -- zeta_note = require("lsp.zeta_note"),
-    -- sqls = require("lsp.sqls"),
-    -- vuels = require("lsp.vuels")
-}
-
-for lsp, option in pairs(servers) do
+-- Use a loop to conveniently call 'setup' on multiple servers and
+-- map buffer local keybindings when the language server attaches
+local servers = { 'pyright', 'clangd' }
+for _, lsp in pairs(servers) do
   require('lspconfig')[lsp].setup {
     on_attach = on_attach,
-    option,
     flags = {
       -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,

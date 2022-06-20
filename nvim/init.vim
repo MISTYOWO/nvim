@@ -203,7 +203,8 @@ highlight Normal guibg=NONE ctermbg=None
 "let ayucolor="mirage" " for mirage version of theme
 "let ayucolor="dark"   " for dark version of theme
 "colorscheme ayu
-colorscheme molokai
+colorscheme gruvbox
+"colorscheme molokai
 let g:molokai_original = 1
 " 搜素文件
 let g:onedark_config = {
@@ -228,7 +229,8 @@ set ofu=syntaxcomplete#Complete
 "set cursorline
 set rnu
 set nu
-set nowrap
+set wrap
+set textwidth=80
 
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
 set enc=utf8
