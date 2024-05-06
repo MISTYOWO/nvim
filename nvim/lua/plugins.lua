@@ -32,11 +32,17 @@ return require('packer').startup(function()
     -- lspkind
     use 'onsails/lspkind-nvim'
     use {
-    "liuchengxu/vista.vim",
-    config = function()
-        require("conf.vista")
-    end
-}
+        "liuchengxu/vista.vim",
+        config = function()
+            require("conf.vista")
+        end
+    }
+    use {
+        'goolord/alpha-nvim',
+        config = function ()
+            require'alpha'.setup(require'alpha.themes.dashboard'.config)
+        end
+    }
 end
 )
 
